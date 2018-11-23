@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv='x-ua-compatible' content='ie=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+	<title>URL Query parameters inspector</title>
+
+	<link rel="stylesheet" href="files/css/styles.css">
+
+
+</head>
+
+<body>
+
+	<div class='wrapper'>
+		<header>
+			<div>
+				<h1>URL query parameters inspector</h1>
+				<h3>YOLO</h3>
+			</div>
+			<div>
+				Huh
+			</div>
+			
+		</header>
+
+		<div class='content'>
+
+			<div class='app'>
+
+				<form class='url-input-wrapper'>
+					<input type='url' required placeholder="https://www.example.com/index?q1=v1&q2=v2" value='https://www.google.co.in/search?q=what+is+an+ad+tag&spell=1&sa=X&ved=0ahUKEwjf3siIzuneAhUUSX0KHV5xC2UQBQgrKAA&biw=1966&bih=1064'>
+					<button>Inspect</button>
+				</form>
+
+
+				<div class='query-table'>
+					<div class='query-item-row'>
+						<div class='query-count'>
+							1
+						</div>
+						<div class='query-key'>
+							<input type="text" value="q">
+						</div>
+						<div class='query-value'>
+							<input type="text" value="Hey you">
+						</div>
+						<div class='query-controls'>
+							<a href='#'>remove</a>
+						</div>
+					</div>
+
+					<div class='query-item-row'>
+						<div class='query-count'>
+							1
+						</div>
+						<div class='query-key'>
+							q
+						</div>
+						<div class='query-value'>
+							Hey you
+						</div>
+						<div class='query-controls'>
+							<a href='#'>remove</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="url-result-wrapper" style="display:none">
+					<div class='url-result'></div>
+					<div class="url-result-copy copy-trigger">copy</div>
+				</div>
+				
+
+			</div>
+		</div>
+
+		<footer>
+
+		</footer>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="files/js/app.js"></script>
+</body>
+
+
+</html>

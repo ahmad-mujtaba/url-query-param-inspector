@@ -1,0 +1,192 @@
+/* =Reset
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+html {
+  font-size: 62.5%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centred in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */ }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover,
+a:active {
+  /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+  outline: 0; }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+	  outline: none;
+  }
+
+a img {
+  border: 0; }
+
+
+  body {
+	  background-repeat: no-repeat;
+	  background-color:rgb(226, 226, 226);
+	  background-image:linear-gradient(to bottom, rgb(134, 158, 26) 300px, rgb(226, 226, 226) 300px);
+	  font-size:16px;
+	  color:#333;
+	  font-family: sans-serif;
+  }
+
+  .wrapper {
+	  width:960px;
+	  margin:0px auto;
+	  height:1000px;
+  }
+
+  header {
+	  color:#fff;
+	  display:flex;
+  }
+
+  header > * {
+	  flex-grow: 0;
+	  flex-basis: 50%;
+  }
+
+  header h1 {
+	  font-size:2.5rem;
+	  color:#fff;
+	  font-weight:normal;
+	  letter-spacing: 0;
+	  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  }
+
+  .content {
+	  background:#fff;
+	  border-radius:1rem;
+
+	  height:600px;
+	  box-sizing:border-box;
+	  padding:2rem;
+
+  }
+
+  .url-input-wrapper {
+	display:flex;
+	justify-content: stretch;
+	align-items: center;
+	border:1px solid #777;
+	border-radius:10rem;
+  }
+
+  .url-input-wrapper button,   .url-input-wrapper input {
+	  border:0;
+	  border-radius:10rem;
+	  font-size:14px;
+
+  }
+
+  .url-input-wrapper button {
+	flex:0 0;
+	display:block;
+	height:100%;
+
+  }
+
+  .url-input-wrapper input {
+	flex:1 1;
+	padding:1rem;
+	padding-left:2rem;
+}
+
+button {
+	background-image:linear-gradient(135deg, rgb(243, 90, 19), rgb(182, 64, 10));
+	padding:1rem 2rem;
+	border-radius:10rem;
+	color:#fff;
+	
+	text-transform: uppercase;
+	
+	cursor:pointer;
+	
+}
+
+
+.query-table {
+	display:table;
+	width:100%;
+}
+
+.query-item-row {
+	display:table-row;
+}
+
+.query-item-row:nth-child(2n) {
+	background:#f4f4f4;
+}
+
+.query-item-row > * {
+	display:table-cell;
+	border-bottom:1px solid #ddd;
+	padding:1rem;
+}
+
+.query-controls, .query-count {
+	width: 1rem;
+}
+
+.url-result {
+	background:rgb(255, 246, 193);
+	border:2px dashed rgb(163, 156, 125);
+	padding:1rem;
+}
