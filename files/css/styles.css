@@ -1,32 +1,83 @@
 /* =Reset
 -------------------------------------------------------------- */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  border: 0;
-  font-family: inherit;
-  font-size: 100%;
-  font-style: inherit;
-  font-weight: inherit;
-  margin: 0;
-  outline: 0;
-  padding: 0;
-  vertical-align: baseline; }
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
 
 html {
-  font-size: 62.5%;
-  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
-  overflow-y: scroll;
-  /* Keeps page centred in all browsers regardless of content height */
-  -webkit-text-size-adjust: 100%;
-  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
-  -ms-text-size-adjust: 100%;
-  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */ }
+	font-size: 62.5%;
+	/* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll;
+	/* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%;
+	/* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%;
+	/* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
 
 article,
 aside,
@@ -38,155 +89,189 @@ header,
 hgroup,
 nav,
 section {
-  display: block; }
+	display: block;
+}
 
-ol, ul {
-  list-style: none; }
+ol,
+ul {
+	list-style: none;
+}
 
 table {
-  /* tables still need 'cellspacing="0"' in the markup */
-  border-collapse: separate;
-  border-spacing: 0; }
+	/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
 
-caption, th, td {
-  font-weight: normal;
-  text-align: left; }
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: ""; }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
 
-blockquote, q {
-  quotes: "" ""; }
+blockquote,
+q {
+	quotes: """";
+}
 
 a:focus {
-  outline: thin dotted; }
+	outline: thin dotted;
+}
 
 a:hover,
 a:active {
-  /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
-  outline: 0; }
+	/* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
 
-  input:focus,
-  select:focus,
-  textarea:focus,
-  button:focus {
-	  outline: none;
-  }
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+	outline: none;
+}
 
 a img {
-  border: 0; }
+	border: 0;
+}
 
 
-  body {
-	  background-repeat: no-repeat;
-	  background-color:rgb(226, 226, 226);
-	  background-image:linear-gradient(to bottom, rgb(134, 158, 26) 300px, rgb(226, 226, 226) 300px);
-	  font-size:16px;
-	  color:#333;
-	  font-family: sans-serif;
-  }
+body {
+	background-repeat: no-repeat;
+	background-color: rgb(226, 226, 226);
+	background-image: linear-gradient(to bottom, rgb(28, 95, 182) 300px, rgb(226, 226, 226) 300px);
+	font-size: 16px;
+	color: #333;
+	font-family: sans-serif;
+}
 
-  .wrapper {
-	  width:960px;
-	  margin:0px auto;
-	  height:1000px;
-  }
+.wrapper {
+	width: 960px;
+	margin: 0px auto;
+	height: 1000px;
+}
 
-  header {
-	  color:#fff;
-	  display:flex;
-  }
+header {
+	color: #fff;
+	display: flex;
+}
 
-  header > * {
-	  flex-grow: 0;
-	  flex-basis: 50%;
-  }
+header>* {
+	flex-grow: 0;
+	flex-basis: 50%;
+}
 
-  header h1 {
-	  font-size:2.5rem;
-	  color:#fff;
-	  font-weight:normal;
-	  letter-spacing: 0;
-	  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
-  }
+header h1 {
+	font-size: 2.5rem;
+	color: #fff;
+	font-weight: normal;
+	letter-spacing: 0;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
 
-  .content {
-	  background:#fff;
-	  border-radius:1rem;
+.content {
+	background: #fff;
+	border-radius: 1rem;
 
-	  height:600px;
-	  box-sizing:border-box;
-	  padding:2rem;
+	height: 600px;
+	box-sizing: border-box;
+	padding: 2rem;
 
-  }
+}
 
-  .url-input-wrapper {
-	display:flex;
-	justify-content: stretch;
-	align-items: center;
-	border:1px solid #777;
-	border-radius:10rem;
-  }
+.url-input-wrapper {
+	display: flex;
+}
 
-  .url-input-wrapper button,   .url-input-wrapper input {
-	  border:0;
-	  border-radius:10rem;
-	  font-size:14px;
+.url-input-wrapper button,
+.url-input-wrapper input {
+	border: 0;
+	height: 56px;
+}
 
-  }
+.url-input-wrapper button {
 
-  .url-input-wrapper button {
-	flex:0 0;
-	display:block;
-	height:100%;
+	margin-left: 12px;
 
-  }
+}
 
-  .url-input-wrapper input {
-	flex:1 1;
-	padding:1rem;
-	padding-left:2rem;
+.url-input-wrapper input {
+	
+	font-size: 16px;
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid #ccc;
+	padding: 8px;
+	border-radius: 2px;
+	transition: 200ms linear border;
+	padding-left: 44px;
+	background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTMuOSAxMmMwLTEuNzEgMS4zOS0zLjEgMy4xLTMuMWg0VjdIN2MtMi43NiAwLTUgMi4yNC01IDVzMi4yNCA1IDUgNWg0di0xLjlIN2MtMS43MSAwLTMuMS0xLjM5LTMuMS0zLjF6TTggMTNoOHYtMkg4djJ6bTktNmgtNHYxLjloNGMxLjcxIDAgMy4xIDEuMzkgMy4xIDMuMXMtMS4zOSAzLjEtMy4xIDMuMWgtNFYxN2g0YzIuNzYgMCA1LTIuMjQgNS01cy0yLjI0LTUtNS01eiIvPjwvc3ZnPg==') no-repeat 12px center;
+
+}
+
+.url-input-wrapper input:focus {
+	border-color: #888;
+	border-bottom: 2px solid rgb(15, 136, 235);
+	padding-bottom: 7px;
 }
 
 button {
-	background-image:linear-gradient(135deg, rgb(243, 90, 19), rgb(182, 64, 10));
-	padding:1rem 2rem;
-	border-radius:10rem;
-	color:#fff;
-	
+	background: rgb(240, 76, 0);
+	padding: 16px 24px;
+	color: #fff;
 	text-transform: uppercase;
-	
-	cursor:pointer;
-	
+	cursor: pointer;
+	border-radius: 3px;
+	box-shadow: none;
+	letter-spacing: 1px;
+	line-height: 1;
+	height: auto;
+	width: auto;
+
+}
+
+button:hover {
+	background: rgb(241, 115, 57);
+}
+button:active {
+	background: rgb(190, 60, 0);
 }
 
 
 .query-table {
-	display:table;
-	width:100%;
+	display: table;
+	width: 100%;
 }
 
 .query-item-row {
-	display:table-row;
+	display: table-row;
 }
 
 .query-item-row:nth-child(2n) {
-	background:#f4f4f4;
+	background: #f4f4f4;
 }
 
-.query-item-row > * {
-	display:table-cell;
-	border-bottom:1px solid #ddd;
-	padding:1rem;
+.query-item-row>* {
+	display: table-cell;
+	border-bottom: 1px solid #ddd;
+	padding: 1rem;
 }
 
-.query-controls, .query-count {
+.query-controls,
+.query-count {
 	width: 1rem;
 }
 
 .url-result {
-	background:rgb(255, 246, 193);
-	border:2px dashed rgb(163, 156, 125);
-	padding:1rem;
+	background: rgb(255, 246, 193);
+	border: 2px dashed rgb(163, 156, 125);
+	padding: 1rem;
 }

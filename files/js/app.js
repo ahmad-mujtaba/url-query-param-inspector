@@ -21,9 +21,9 @@ $(document).ready(function () {
 					html += "<div class='query-item-row' data-key='" + key + "'>";
 
 					html += "<div class='query-count'>" + (++count) + "</div>";
-					html += "<div class='query-key'> <input type='text' value='" + key + "' ><a href='#' class='action-copy copy-trigger'>copy</a> </div>";
-					html += "<div class='query-value'> <input type='text' value='" + value + "' ><a href='#' class='action-copy copy-trigger'>copy</a> </div>";
-					html += "<div class='query-controls'> <a href='#' class='action-remove'>remove</a></div>";
+					html += "<div class='query-key'> <input type='text' value='" + key + "' ><a href='#' class='action-copy copy-trigger'><i class='material-icons'>file_copy</i></a></a> </div>";
+					html += "<div class='query-value'> <input type='text' value='" + value + "' ><a href='#' class='action-copy copy-trigger'><i class='material-icons'>file_copy</i></a></a> </div>";
+					html += "<div class='query-controls'> <a href='#' class='action-remove'><i class='material-icons'>clear</i></a></div>";
 
 					html += "</div>";
 				});
@@ -83,10 +83,11 @@ $(document).ready(function () {
 	});
 
 	$(document).on("click", ".copy-trigger", function (e) {
-		$(this).html("copied!");
+		var original = $(this).html();
+		$(this).html("<i class='material-icons'>done</i>");
 		var $this = $(this);
 		setTimeout(function () {
-			$this.html("copy");
+			$this.html(original);
 		}, 2000);
 	})
 });
