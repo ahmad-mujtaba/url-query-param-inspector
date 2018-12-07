@@ -40,6 +40,7 @@ $(document).ready(function () {
 			} catch (e) {
 				error = ERROR.INVALID_URL;
 				$(".url-result-wrapper").hide();
+				console.error(e);
 
 			}
 		} else {
@@ -94,7 +95,44 @@ $(document).ready(function () {
 
 let renderUrl = (url) => {
 	$(".url-result-wrapper").show();
-	$(".url-result").html("<a href='" + url.href + "' target='_blank'>" + url.href + "</a>");
+	var coloredHref = '';
+	if(url.protocol != '') {
+		coloredHref += "<span class='uf-protocol'>"+url.protocol+"</span><span class='uf-slash'>//</span>";
+	}
+	if(url.username != '') {
+		coloredHref += "<span class='uf-username'>"+url.username+"</span>";
+	}
+	if(url.password != '') {
+		coloredHref += "<span class='uf-colon'>:</span><span class='uf-password'>"+url.password+"</span><span class='uf-at'>@</span>";
+	}
+
+	if(url.host.indexOf(":") !== -1) {
+		coloredHref += "<span class='uf-host'>"+url.host.substring(0, url.host.indexOf(":"))+"</span><span class='uf-colon'>:</span>";
+		coloredHref += "<span class='uf-port'>"+url.port+"</span>";
+	} else {
+		coloredHref += "<span class='uf-host'>"+url.host+"</span>";
+	}
+	coloredHref += "<span class='uf-path'>"+url.pathname+"</span>";
+
+	var queryString = '';
+	var queryItemCount = 0;
+	url.searchParams.forEach((value, key) => {
+		if(queryItemCount === 0) {
+			queryString += "<span class='uf-question-mark'>?</span>";
+		} else {
+			queryString += "<span class='uf-ampersand'>&</span>";
+		}
+		queryString += "<span class='uf-query-item'>"+key+"</span><span class='uf-equal-sign'>=</span><span class='uf-query-value'>"+value+"</span>";
+		++queryItemCount;
+	});
+
+	coloredHref = coloredHref + queryString;
+
+	if(url.hash != '') {
+		coloredHref += "<span class='uf-hash'>" + url.hash + "</span>";
+	}
+	
+	$(".url-result").html("<a href='" + url.href + "' target='_blank'>" + coloredHref + "</a>");
 }
 
 let ERROR = {

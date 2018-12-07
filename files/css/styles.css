@@ -203,6 +203,9 @@ header h1 {
 
 }
 
+.url-input-wrapper  > div {
+	width: 100%;
+}
 .url-input-wrapper input {
 	
 	font-size: 16px;
@@ -210,7 +213,7 @@ header h1 {
 	width: 100%;
 	border: 1px solid #ccc;
 	padding: 8px;
-	border-radius: 2px;
+	border-radius: 2px 2px 0 0;
 	transition: 200ms linear border;
 	padding-left: 44px;
 	background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMCAwaDI0djI0SDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTMuOSAxMmMwLTEuNzEgMS4zOS0zLjEgMy4xLTMuMWg0VjdIN2MtMi43NiAwLTUgMi4yNC01IDVzMi4yNCA1IDUgNWg0di0xLjlIN2MtMS43MSAwLTMuMS0xLjM5LTMuMS0zLjF6TTggMTNoOHYtMkg4djJ6bTktNmgtNHYxLjloNGMxLjcxIDAgMy4xIDEuMzkgMy4xIDMuMXMtMS4zOSAzLjEtMy4xIDMuMWgtNFYxN2g0YzIuNzYgMCA1LTIuMjQgNS01cy0yLjI0LTUtNS01eiIvPjwvc3ZnPg==') no-repeat 12px center;
@@ -219,8 +222,6 @@ header h1 {
 
 .url-input-wrapper input:focus {
 	border-color: #888;
-	border-bottom: 2px solid rgb(15, 136, 235);
-	padding-bottom: 7px;
 }
 
 button {
@@ -235,15 +236,17 @@ button {
 	line-height: 1;
 	height: auto;
 	width: auto;
-
+	transition:100ms linear background-color;
 }
 
 button:hover {
-	background: rgb(241, 115, 57);
+	background-color:rgb(241, 115, 57);
 }
-button:active {
-	background: rgb(190, 60, 0);
+button:active,button:focus {
+	background-color:rgb(170, 58, 5);
 }
+
+
 
 
 .query-table {
@@ -271,7 +274,90 @@ button:active {
 }
 
 .url-result {
-	background: rgb(255, 246, 193);
-	border: 2px dashed rgb(163, 156, 125);
-	padding: 1rem;
+	background: rgb(52, 60, 63);
+	padding: 2rem;
+	font-family: 'Courier New', Courier, monospace;
+	margin:1rem 0;
 }
+
+.url-result a {
+	color:#eee;
+}
+
+
+
+.baseline {
+  height: 2px;
+  background-color: #dcdcdc;
+}
+
+/* Hover.css > Underline From Left > Modfified */
+.hvr-underline-from-left {
+  -webkit-transform: perspective(1px) translateZ(0);            
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: block;
+  /*display: inline-block;*/
+  overflow: hidden;
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+  /* vertical-align: middle;*/
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: rgb(28, 95, 182);
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, 
+.hvr-underline-from-left:focus:before, 
+.hvr-underline-from-left:active:before {
+  right: 0;
+} 
+
+/* Crucial style rule */
+input:focus + .hvr-underline-from-left:before {
+  right: 0;
+} 
+
+
+
+.uf-protocol { background-color: cyan; color:#000;}
+.uf-username { background-color:rgb(206, 52, 52)}
+.uf-password { background-color: rgb(54, 54, 221)}
+.uf-host { background-color:rgb(148, 107, 177)}
+.uf-port {background-color:rgb(112, 64, 18)}
+.uf-path { background-color:rgb(95, 95, 167)}
+
+.uf-query-item { background-color:rgb(25, 90, 128) }
+.uf-query-value { background-color:rgb(83, 107, 27) }
+
+
+.uf-hash {
+	background:yellow;
+	color:#000;
+}
+.uf-at,
+.uf-colon,
+.uf-slash,
+.uf-question-mark, 
+.uf-equal-sign, 
+.uf-ampersand 
+{ background-color:rgb(110, 110, 110); }
+
+span[class^='uf-'] {
+	display: inline-block;
+	padding:0.7rem 0.2rem;
+}
+
+
+
