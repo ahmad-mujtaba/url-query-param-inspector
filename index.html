@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang='en'>
 
 <head>
 	<meta charset='utf-8'>
@@ -12,6 +12,24 @@
 	<link rel="stylesheet" href="files/css/styles.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+	<meta name="description" content="A tool to inspect and analyze url query parameters, also allows editing of parameters">
+    <meta name="keywords" content="url query parameter, query parameters, url inspect, url query variables">
+
+	<!-- GOOGLE ANALYTICS -->
+    <script>
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4647398-5']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+    </script>
+
 
 </head>
 
@@ -21,10 +39,10 @@
 		<header>
 			<div>
 				<h1>URL query parameters inspector</h1>
-				<h3>YOLO</h3>
+				<h3>A tool to inspect and analyze url query parameters, also allows editing of parameters</h3>
 			</div>
-			<div>
-				Huh
+			<div class='text-right'>
+				<a href='https://www.dynamicguru.com'>www.dynamicguru.com</a>
 			</div>
 			
 		</header>
@@ -36,19 +54,25 @@
 				<form class='url-input-wrapper'>
 					<div class=''>
 						<input type='url' required 
-						placeholder="https://www.example.com/index?q1=v1&q2=v2" 
-						value='https://mujtaba:gallardo@www.google.co.in:8080/search?q=what+is+an+ad+tag&spell=1&sa=X&ved=0ahUKEwjf3siIzuneAhUUSX0KHV5xC2UQBQgrKAA&biw=1966&bih=1064#newTab'>
+						placeholder="Enter or paste a URL and click INSPECT" 
+						value=''>
 						<div class='baseline hvr-underline-from-left'></div>
 					</div>
 					<button>Inspect</button>
 				</form>
 
 
-				<div class='query-table'></div>
+				
+				<div class='query-table-wrapper'>				
+					<div class='query-table-header'>
+						Query Parameters
+					</div>
+					<div class='query-table'></div>
+				</div>
 
 				<div class="url-result-wrapper" style="display:none">
 					<div class='url-result'></div>
-					<div class="url-result-copy copy-trigger">copy</div>
+					<div class="url-result-copy copy-trigger"><i class='material-icons'>file_copy</i> copy url</div>
 				</div>
 				
 

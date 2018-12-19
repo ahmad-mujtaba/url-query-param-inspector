@@ -15,7 +15,7 @@ $(document).ready(function () {
 				let inputUrl = new URL(input);
 				url = inputUrl;
 
-				var html = '';
+				var html = "";
 				var count = 0;
 				inputUrl.searchParams.forEach((value, key) => {
 					html += "<div class='query-item-row' data-key='" + key + "'>";
@@ -23,7 +23,7 @@ $(document).ready(function () {
 					html += "<div class='query-count'>" + (++count) + "</div>";
 					html += "<div class='query-key'> <input type='text' value='" + key + "' ><a href='#' class='action-copy copy-trigger'><i class='material-icons'>file_copy</i></a></a> </div>";
 					html += "<div class='query-value'> <input type='text' value='" + value + "' ><a href='#' class='action-copy copy-trigger'><i class='material-icons'>file_copy</i></a></a> </div>";
-					html += "<div class='query-controls'> <a href='#' class='action-remove'><i class='material-icons'>clear</i></a></div>";
+					html += "<!--<div class='query-controls'> <a href='#' class='action-remove'><i class='material-icons'>clear</i></a></div>-->";
 
 					html += "</div>";
 				});
@@ -34,6 +34,7 @@ $(document).ready(function () {
 					html += "</div>";
 				}
 
+				$(".query-table-wrapper").show();
 				$(".query-table").html(html);
 				renderUrl(url);
 
@@ -122,7 +123,7 @@ let renderUrl = (url) => {
 		} else {
 			queryString += "<span class='uf-ampersand'>&</span>";
 		}
-		queryString += "<span class='uf-query-item'>"+key+"</span><span class='uf-equal-sign'>=</span><span class='uf-query-value'>"+value+"</span>";
+		queryString += "<span class='uf-query-item'>"+key+"</span><span class='uf-equal-sign'>=</span><span class='uf-query-value'>"+encodeURIComponent(value)+"</span>";
 		++queryItemCount;
 	});
 
@@ -132,7 +133,7 @@ let renderUrl = (url) => {
 		coloredHref += "<span class='uf-hash'>" + url.hash + "</span>";
 	}
 	
-	$(".url-result").html("<a href='" + url.href + "' target='_blank'>" + coloredHref + "</a>");
+	$(".url-result").html("<a href='" + encodeURI(url.href) + "' target='_blank' rel='noopener'>" + coloredHref + "</a>");
 }
 
 let ERROR = {
